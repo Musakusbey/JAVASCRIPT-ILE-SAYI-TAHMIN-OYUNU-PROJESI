@@ -1,0 +1,37 @@
+/* Sayı Tahmin Oyunu;
+->1 ile 10 arası rastgele sayı üretilen bir sayıyı aşağı yukarı ifadeleri ile bulmaya çalışın
+->puanlama yapın
+-> kaç kere bileceğini belirtiniz.*/
+
+var sayac=0;
+var hak=5;
+var tahmin;
+
+var sayi=Math.floor(Math.random()*10+1);
+
+while(hak>0)
+{
+    hak--;
+    tahmin=Number(prompt("lütfen bir sayi giriniz:"));
+
+    if(sayi==tahmnin)
+    {
+        console.log(`Tebrikler ${sayac} defada bildiniz.`);
+        break;
+    }
+
+    else if(sayi>tahmin)
+    {
+        console.log("Yukarı");
+    }
+
+    else
+    {
+        console.log("Aşağı");
+    }
+
+    if(hak==0)
+    {
+        console.log("Hakkınız bitti");
+    }
+}
